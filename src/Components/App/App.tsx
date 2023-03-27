@@ -6,7 +6,7 @@ export const App = () => {
     return (
         <div className="App">
             <Routes>
-                <Route path={Paths.home} element={<Home />} />
+                <Route path={Paths.HOME} element={<Home />} />
             </Routes>
         </div>
     );
