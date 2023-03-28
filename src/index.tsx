@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { App } from "./Components/App/App";
 import { ErrorPage } from "./Components/ErrorPage/ErrorPage";
+import "./Sass/main.scss";
 
 interface RouterProps {
     path: string;
