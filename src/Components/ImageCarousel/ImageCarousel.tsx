@@ -1,4 +1,4 @@
-import { Carousel } from "react-bootstrap";
+import { Carousel, Image } from "react-bootstrap";
 
 interface Props {
     images: string[];
@@ -10,11 +10,7 @@ export const ImageCarousel = ({ images }: Props) => {
             {images.map((img, index) => {
                 return (
                     <Carousel.Item interval={7000}>
-                        <img
-                            className="d-block w-100"
-                            src={img}
-                            alt={`sidle ${index}`}
-                        />
+                        <Image fluid src={img} alt={`sidle ${index}`} />
                     </Carousel.Item>
                 );
             })}

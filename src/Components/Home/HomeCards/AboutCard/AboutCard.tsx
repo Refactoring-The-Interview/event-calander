@@ -1,13 +1,12 @@
-import { Button, Card } from "react-bootstrap";
+import { Button, Card, Image } from "react-bootstrap";
+import banner from "../../../../Assets/Images/banner.png";
 import "./AboutCardS.scss";
 
 export const AboutCard = () => {
     return (
         <Card className="AboutCard">
             <Card.Header className="AboutCard-Header">
-                <Card.Title className="AboutCard-Header-Title">
-                    About Us
-                </Card.Title>
+                <Image fluid src={banner} />
             </Card.Header>
             <Card.Body className="AboutCard-Body">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
