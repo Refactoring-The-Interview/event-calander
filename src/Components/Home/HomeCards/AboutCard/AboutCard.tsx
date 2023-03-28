@@ -1,12 +1,15 @@
 import { Button, Card } from "react-bootstrap";
+import "./AboutCardS.scss";
 
 export const AboutCard = () => {
     return (
         <Card className="AboutCard">
-            <Card.Header>
-                <Card.Title>About Us</Card.Title>
+            <Card.Header className="AboutCard-Header">
+                <Card.Title className="AboutCard-Header-Title">
+                    About Us
+                </Card.Title>
             </Card.Header>
-            <Card.Body>
+            <Card.Body className="AboutCard-Body">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
                 mollitia, molestiae quas vel sint commodi repudiandae
                 consequuntur voluptatum laborum numquam blanditiis harum
@@ -34,7 +37,7 @@ export const AboutCard = () => {
                 veniam quasi aliquam eligendi, placeat qui corporis!
             </Card.Body>
 
-            <Button>
+            <Button className="findUs-btn">
                 <h6>Find Us</h6>
             </Button>
         </Card>

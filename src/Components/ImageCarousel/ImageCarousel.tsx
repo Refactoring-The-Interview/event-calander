@@ -9,7 +9,7 @@ export const ImageCarousel = ({ images }: Props) => {
         <Carousel fade>
             {images.map((img, index) => {
                 return (
-                    <Carousel.Item>
+                    <Carousel.Item interval={7000}>
                         <img
                             className="d-block w-100"
                             src={img}
