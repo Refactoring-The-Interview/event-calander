@@ -1,4 +1,5 @@
 import { Carousel, Image } from "react-bootstrap";
+import "./ImageCarouselS.scss";
 
 interface Props {
     images: string[];
@@ -6,7 +7,7 @@ interface Props {
 
 export const ImageCarousel = ({ images }: Props) => {
     return (
-        <Carousel fade>
+        <Carousel fade className="ImageCarousel">
             {images.map((img, index) => {
                 return (
                     <Carousel.Item interval={7000}>

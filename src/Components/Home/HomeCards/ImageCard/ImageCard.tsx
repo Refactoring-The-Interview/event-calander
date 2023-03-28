@@ -12,6 +12,10 @@ export const ImageCard = () => {
             <Card.Body>
                 <ImageCarousel images={images} />
             </Card.Body>
+            <Card.Footer>
+                <Card.Link href="#">Card Link</Card.Link>
+                <Card.Link href="#">Another Link</Card.Link>
+            </Card.Footer>
         </Card>
     );
 };
