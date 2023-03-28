@@ -1,0 +1,25 @@
+.AboutCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+
+    .AboutCard-Header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .AboutCard-Header-Title {
+        text-transform: uppercase;
+    }
+    .AboutCard-Body {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .findUs-btn {
+        margin: 2rem 0;
+        width: 15rem;
+    }
+}

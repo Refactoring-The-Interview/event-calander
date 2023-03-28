@@ -1,0 +1,21 @@
+.Home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .Home-title {
+        width: 50rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .Home-Cards {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-evenly;
+        padding: 1rem;
+    }
+}
