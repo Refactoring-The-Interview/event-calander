@@ -14,10 +14,14 @@ export const NavBar = () => {
                     <Navbar.Brand href={Paths.HOME}>
                         <Image fluid src={Logo} className="Logo" />
                     </Navbar.Brand>
-                    <Nav className="me-auto">
+                    <Nav
+                        className="me-auto"
+                        variant="tabs"
+                        defaultActiveKey={Paths.HOME}
+                    >
                         <Nav.Link href={Paths.HOME}>Home</Nav.Link>
-                        <Nav.Link href="#">Event Calender</Nav.Link>
-                        <Nav.Link href="#">Contact</Nav.Link>
+                        <Nav.Link href="#event">Event Calender</Nav.Link>
+                        <Nav.Link href="#contact">Contact</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
