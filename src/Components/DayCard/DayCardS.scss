@@ -1,0 +1,30 @@
+.DayCard {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 15rem;
+    padding: 1rem;
+
+    .card {
+        width: 20rem;
+    }
+
+    .EventHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .CardEvents {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .Event {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.1rem;
+    }
+}
