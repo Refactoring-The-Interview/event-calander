@@ -30,6 +30,7 @@
         "web-vitals": "^2.1.0"
     },
     "devDependencies": {
+        "@faker-js/faker": "^7.6.0",
         "@types/lodash": "^4.14.191",
         "@types/react-router-dom": "^5.3.3",
         "husky": "^8.0.3",

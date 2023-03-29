@@ -7,6 +7,7 @@ import Logo from "../../Assets/Images/Logo.jpeg";
 import "./NavBarS.scss";
 
 export const NavBar = () => {
+    let activeTab = Paths.HOME;
     return (
         <>
             <Navbar bg="light" variant="primary" className="NavBar" fixed="top">
@@ -16,12 +17,22 @@ export const NavBar = () => {
                     </Navbar.Brand>
                     <Nav
                         className="me-auto"
+                        defaultActiveKey={activeTab}
                         variant="tabs"
-                        defaultActiveKey={Paths.HOME}
                     >
-                        <Nav.Link href={Paths.HOME}>Home</Nav.Link>
-                        <Nav.Link href="#event">Event Calender</Nav.Link>
-                        <Nav.Link href="#contact">Contact</Nav.Link>
+                        <Nav.Item>
+                            <Nav.Link href={Paths.HOME}>Home</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link href={Paths.EVENTCALENDER}>
+                                Event Calender
+                            </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link eventKey="3" href="#contact">
+                                Contact
+                            </Nav.Link>
+                        </Nav.Item>
                     </Nav>
                 </Container>
             </Navbar>
