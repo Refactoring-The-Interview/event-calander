@@ -1,4 +1,4 @@
-import { Button, Card } from "react-bootstrap";
+import { Badge, Button, Card } from "react-bootstrap";
 import { EventDay } from "../../Apis/Types";
 import "./DayCardS.scss";
 
@@ -12,8 +12,11 @@ export const DayCard = ({ event }: Props) => {
     return (
         <div className="DayCard">
             <Card>
-                <Card.Header>
-                    <h3>{date}</h3>
+                <Card.Header className="EventHeader">
+                    <Badge bg="warning">
+                        <h3>{date}</h3>
+                    </Badge>
+                    <h3>Day</h3>
                 </Card.Header>
                 <Card.Body className="CardEvents">
                     {events.map((event) => {
@@ -21,7 +24,7 @@ export const DayCard = ({ event }: Props) => {
                         return (
                             <div className="Event">
                                 {eventName}
-                                <Button>Info</Button>
+                                <Button variant="outline-primary">Info</Button>
                             </div>
                         );
                     })}

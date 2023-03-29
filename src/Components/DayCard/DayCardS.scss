@@ -9,6 +9,13 @@
         width: 20rem;
     }
 
+    .EventHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .CardEvents {
         display: flex;
         flex-direction: column;
