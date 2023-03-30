@@ -20,4 +20,6 @@ export interface Event {
     location: string;
     eventLeader: string;
     otherInfo: any;
+    startTime: string;
+    endTime: string;
 }

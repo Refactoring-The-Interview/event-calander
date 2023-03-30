@@ -1,0 +1,14 @@
+.LocationLeaderCard {
+    display: flex;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+
+    .LLHeader {
+        display: flex;
+
+        .card-title {
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
