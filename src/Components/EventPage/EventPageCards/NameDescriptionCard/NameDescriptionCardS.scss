@@ -1,0 +1,14 @@
+.NameDescriptionCard.card {
+    display: flex;
+    height: 30rem;
+
+    .CardTitle {
+        display: flex;
+        justify-content: flex-start;
+        padding: 1rem;
+    }
+
+    .Description {
+        padding: 1rem;
+    }
+}
