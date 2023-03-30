@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const DayCard = ({ event }: Props) => {
-    const { date, day, events } = event;
+    const { date, events } = event;
     const navigate = useNavigate();
 
     //todo make map its own component

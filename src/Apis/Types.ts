@@ -1,3 +1,4 @@
+// todo make uniform style
 export enum Paths {
     HOME = "/HOME",
     EVENTCALENDER = "/EVENTCALENDER",
@@ -5,7 +6,7 @@ export enum Paths {
 }
 
 export interface EventDay {
-    id: string;
+    dayId: string;
     date: number;
     day: string;
     events: Event[];
