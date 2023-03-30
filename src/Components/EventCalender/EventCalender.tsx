@@ -1,16 +1,15 @@
-import { useState } from "react";
-import { EventDay } from "../../Apis/Types";
-import { DummyEvents } from "../../Apis/Utils";
+import { useContext } from "react";
+import { MyCalenderContext } from "../Context/CalenderContext";
 import { DayCard } from "../DayCard/DayCard";
 import "./EventCalenderS.scss";
 
 export const EventCalender = () => {
-    const [dummyEvents, setDummyEvents] = useState<EventDay[]>(DummyEvents());
+    const { events } = useContext(MyCalenderContext);
 
     return (
         <div className="EventCalender">
-            {dummyEvents.map((event, index) => {
-                return <DayCard event={event} />;
+            {events.map((event, index) => {
+                return <DayCard event={event} key={index} />;
             })}
         </div>
     );

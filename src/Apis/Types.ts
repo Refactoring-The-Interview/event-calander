@@ -1,6 +1,7 @@
 export enum Paths {
     HOME = "/HOME",
     EVENTCALENDER = "/EVENTCALENDER",
+    EventInfo = "/EventInfo/:EventInfoId",
 }
 
 export interface EventDay {
@@ -10,6 +11,7 @@ export interface EventDay {
 }
 
 export interface Event {
+    eventId: string;
     eventName: string;
     joined: string[];
     description: string;

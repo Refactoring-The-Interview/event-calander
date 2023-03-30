@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker";
-import { EventDay } from "./Types";
+import { EventDay, Paths } from "./Types";
 
 export const GetDateCount = () => {
     const date = new Date();
@@ -20,6 +20,7 @@ export const DummyEvents = () => {
 
             events: [
                 {
+                    eventId: Math.random().toString(),
                     eventName: faker.lorem.word(),
                     joined: [
                         faker.name.fullName(),
@@ -32,6 +33,7 @@ export const DummyEvents = () => {
                     otherInfo: null,
                 },
                 {
+                    eventId: Math.random().toString(),
                     eventName: faker.lorem.word(),
                     joined: [
                         faker.name.fullName(),
@@ -44,6 +46,7 @@ export const DummyEvents = () => {
                     otherInfo: null,
                 },
                 {
+                    eventId: Math.random().toString(),
                     eventName: faker.lorem.word(),
                     joined: [
                         faker.name.fullName(),
@@ -60,4 +63,8 @@ export const DummyEvents = () => {
         events.push(day);
     }
     return events;
+};
+
+export const pathGenEvent = {
+    [Paths.EventInfo]: (eventId: string) => `/EventInfo/${eventId}`,
 };
