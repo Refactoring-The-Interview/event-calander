@@ -1,10 +1,11 @@
 export enum Paths {
     HOME = "/HOME",
     EVENTCALENDER = "/EVENTCALENDER",
-    EventInfo = "/EventInfo/:EventInfoId",
+    EventInfo = "/EventInfo/:eventId",
 }
 
 export interface EventDay {
+    id: string;
     date: number;
     day: string;
     events: Event[];

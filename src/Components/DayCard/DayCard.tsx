@@ -12,6 +12,7 @@ export const DayCard = ({ event }: Props) => {
     const { date, day, events } = event;
     const navigate = useNavigate();
 
+    //todo make map its own component
     return (
         <div className="DayCard">
             <Card>
@@ -24,7 +25,6 @@ export const DayCard = ({ event }: Props) => {
                 <Card.Body className="CardEvents">
                     {events.map((event, index) => {
                         const { eventName, eventId } = event;
-                        // console.log(eventId, eventName);
                         return (
                             <div className="Event" key={index}>
                                 {eventName}

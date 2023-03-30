@@ -6,12 +6,16 @@ export const EventPage = () => {
     const { eventId } = useParams();
     const { events } = useContext(MyCalenderContext);
 
-    const eventInfo = events.find((event) => {
-        return event.events.find((event) => {
+    const day = events.find((day) => {
+        return day.events.find((event) => {
             return event.eventId === eventId;
         });
     });
-    console.log(eventInfo);
+    const event = day?.events.find((event) => {
+        return event.eventId === eventId;
+    });
+
+    console.log(event);
 
     return (
         <div>

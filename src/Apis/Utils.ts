@@ -14,7 +14,9 @@ export const DummyEvents = () => {
     const events = [];
 
     for (let i = 0; i < daysOfMonth; i += 1) {
+        const id = i.toString();
         const day: EventDay = {
+            id: id,
             date: i + 1,
             day: "Monday",
 
