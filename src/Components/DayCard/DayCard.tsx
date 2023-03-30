@@ -1,5 +1,7 @@
 import { Badge, Button, Card } from "react-bootstrap";
-import { EventDay } from "../../Apis/Types";
+import { useNavigate } from "react-router-dom";
+import { EventDay, Paths } from "../../Apis/Types";
+import { pathGenEvent } from "../../Apis/Utils";
 import "./DayCardS.scss";
 
 interface Props {
@@ -7,8 +9,10 @@ interface Props {
 }
 
 export const DayCard = ({ event }: Props) => {
-    const { date, day, events } = event;
+    const { date, events } = event;
+    const navigate = useNavigate();
 
+    //todo make map its own component
     return (
         <div className="DayCard">
             <Card>
@@ -19,12 +23,23 @@ export const DayCard = ({ event }: Props) => {
                     <h3>Day</h3>
                 </Card.Header>
                 <Card.Body className="CardEvents">
-                    {events.map((event) => {
-                        const { eventName } = event;
+                    {events.map((event, index) => {
+                        const { eventName, eventId } = event;
                         return (
-                            <div className="Event">
+                            <div className="Event" key={index}>
                                 {eventName}
-                                <Button variant="outline-primary">Info</Button>
+                                <Button
+                                    variant="outline-primary"
+                                    onClick={(e) => {
+                                        navigate(
+                                            pathGenEvent[Paths.EventInfo](
+                                                eventId
+                                            )
+                                        );
+                                    }}
+                                >
+                                    Info
+                                </Button>
                             </div>
                         );
                     })}
