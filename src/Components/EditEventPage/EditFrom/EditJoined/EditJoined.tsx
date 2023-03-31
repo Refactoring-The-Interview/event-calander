@@ -8,13 +8,18 @@ interface Props {
 
 export const EditJoined = ({ value, setValue }: Props) => {
     const { joined } = value;
+
+    if (!joined) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <Card>
             <Card.Header>Participants</Card.Header>
             <Card.Body>
-                {joined.map((person) => {
+                {/* {joined.map((person) => {
                     return <div>{person}</div>;
-                })}
+                })} */}
             </Card.Body>
         </Card>
     );
