@@ -5,7 +5,7 @@ import { MyCalenderContext } from "../Context/CalenderContext";
 import { JoinFormCard } from "./EventPageCards/JoinFormCard/JoinFormCard";
 import { LocationLeaderCard } from "./EventPageCards/LocationLeaderCard/LocationLeaderCard";
 import { NameDescriptionCard } from "./EventPageCards/NameDescriptionCard/NameDescriptionCard";
-import './EventPageS.scss';
+import "./EventPageS.scss";
 
 export const EventPage = () => {
     const { eventId } = useParams();
@@ -17,6 +17,7 @@ export const EventPage = () => {
             return event.eventId === eventId;
         });
     });
+
     const event: Event | undefined = day?.events.find((event) => {
         return event.eventId === eventId;
     });
