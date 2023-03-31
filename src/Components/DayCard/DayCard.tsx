@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const DayCard = ({ event }: Props) => {
-    const { date, events } = event;
+    const { date, events, day } = event;
     const navigate = useNavigate();
 
     //todo make map its own component
@@ -20,7 +20,7 @@ export const DayCard = ({ event }: Props) => {
                     <Badge bg="warning">
                         <h3>{date}</h3>
                     </Badge>
-                    <h3>Day</h3>
+                    <h3>{day}</h3>
                 </Card.Header>
                 <Card.Body className="CardEvents">
                     {events.map((event, index) => {

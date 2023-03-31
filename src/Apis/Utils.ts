@@ -14,13 +14,24 @@ export const GetDateCount = () => {
 export const DummyEvents = () => {
     const daysOfMonth = GetDateCount();
     const events = [];
+    const date = new Date();
+    let firstDay = new Date(
+        date.getFullYear(),
+        date.getMonth(),
+        1
+    ).toLocaleDateString("en-us", {
+        weekday: "short",
+    });
+
+    const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let weekStart = daysOfWeek.indexOf(firstDay);
 
     for (let i = 0; i < daysOfMonth; i += 1) {
         const dayId = i.toString();
         const day: EventDay = {
             dayId: dayId,
             date: i + 1,
-            day: "Monday",
+            day: daysOfWeek[weekStart],
 
             events: [
                 {
@@ -70,7 +81,12 @@ export const DummyEvents = () => {
                 },
             ],
         };
+
         events.push(day);
+        if (weekStart >= 6) weekStart = 0;
+        else {
+            weekStart += 1;
+        }
     }
     return events;
 };

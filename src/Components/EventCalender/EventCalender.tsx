@@ -5,7 +5,6 @@ import "./EventCalenderS.scss";
 
 export const EventCalender = () => {
     const { events } = useContext(MyCalenderContext);
-
     return (
         <div className="EventCalender">
             {events.map((event, index) => {
