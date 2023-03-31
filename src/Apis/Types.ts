@@ -3,6 +3,7 @@ export enum Paths {
     HOME = "/HOME",
     EVENTCALENDER = "/EVENTCALENDER",
     EventInfo = "/EventInfo/:eventId",
+    EditEvent = "/EditEvent/:eventId",
 }
 
 export interface EventDay {

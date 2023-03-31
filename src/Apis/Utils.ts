@@ -95,3 +95,7 @@ export const DummyEvents = () => {
 export const pathGenEvent = {
     [Paths.EventInfo]: (eventId: string) => `/EventInfo/${eventId}`,
 };
+
+export const pathGenEditEvent = {
+    [Paths.EditEvent]: (eventId: string) => `/EditEvent/${eventId}`,
+};

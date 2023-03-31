@@ -1,0 +1,19 @@
+.EditEvent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60rem;
+    height: 60rem;
+    padding: 3rem;
+
+    .EditEventContainerFormCard.card {
+        display: flex;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .EventEditFromCardBody {
+        padding: 3rem;
+    }
+}

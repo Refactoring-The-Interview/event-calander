@@ -10,17 +10,17 @@ export const NameDescriptionCard = ({ eventName, description }: Props) => {
     return (
         <Card className="NameDescriptionCard">
             <Card.Header className="CardTitle">
-                <Card.Text>
+                <div>
                     <h4>
                         <Badge bg="warning">Event</Badge>
                         <div>{eventName}</div>
                     </h4>
-                </Card.Text>
+                </div>
             </Card.Header>
             <Card.Body className="Description">
-                <Card.Text>
+                <div>
                     <p>{description}</p>
-                </Card.Text>
+                </div>
             </Card.Body>
         </Card>
     );
