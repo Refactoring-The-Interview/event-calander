@@ -1,3 +1,4 @@
+import { Container } from "react-bootstrap";
 import { Route, Routes } from "react-router-dom";
 import { Paths } from "../../Apis/Types";
 import { MyCalenderProvider } from "../Context/CalenderContext";
@@ -13,15 +14,20 @@ export const App = () => {
         <div className="App">
             <MyCalenderProvider>
                 <NavBar />
-                <Routes>
-                    <Route path={Paths.EditEvent} element={<EditEventPage />} />
-                    <Route path={Paths.EventInfo} element={<EventPage />} />
-                    <Route path={Paths.HOME} element={<Home />} />
-                    <Route
-                        path={Paths.EVENTCALENDER}
-                        element={<EventCalender />}
-                    />
-                </Routes>
+                <Container className="EventContainer">
+                    <Routes>
+                        <Route
+                            path={Paths.EditEvent}
+                            element={<EditEventPage />}
+                        />
+                        <Route path={Paths.EventInfo} element={<EventPage />} />
+                        <Route path={Paths.HOME} element={<Home />} />
+                        <Route
+                            path={Paths.EVENTCALENDER}
+                            element={<EventCalender />}
+                        />
+                    </Routes>
+                </Container>
             </MyCalenderProvider>
         </div>
     );
