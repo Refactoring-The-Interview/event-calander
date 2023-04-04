@@ -17,9 +17,9 @@ export const EditJoined = ({ value, setValue }: Props) => {
         <Card>
             <Card.Header>Participants</Card.Header>
             <Card.Body>
-                {/* {joined.map((person) => {
+                {joined.map((person) => {
                     return <div>{person}</div>;
-                })} */}
+                })}
             </Card.Body>
         </Card>
     );
