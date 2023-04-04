@@ -8,7 +8,7 @@ import { EditFrom } from "./EditFrom/EditFrom";
 
 export const EditEventPage = () => {
     const { eventId } = useParams();
-    const { events } = useContext(MyCalenderContext);
+    const { events, setEvents } = useContext(MyCalenderContext);
     const [editedEvent, setEditEvent] = useState<Event | any>({});
     const navigate = useNavigate();
 
@@ -31,7 +31,13 @@ export const EditEventPage = () => {
     }
 
     return (
-        <Form className="EditEvent">
+        <Form
+            className="EditEvent"
+            onSubmit={(e) => {
+                e.preventDefault();
+                console.log("currently no backed to save to");
+            }}
+        >
             <Card className="EditEventContainerFormCard">
                 <Card.Header>
                     <Card.Title>Edit Event</Card.Title>
@@ -42,8 +48,10 @@ export const EditEventPage = () => {
             </Card>
 
             <ButtonGroup>
-                <Button>Save Edits</Button>
-                <Button variant="danger">Cancel</Button>
+                <Button type="submit">Save Edits</Button>
+                <Button variant="danger" type="button">
+                    Cancel
+                </Button>
             </ButtonGroup>
         </Form>
     );

@@ -46,8 +46,8 @@ export const DummyEvents = () => {
                     location: faker.address.streetAddress(),
                     eventLeader: faker.name.fullName(),
                     otherInfo: null,
-                    startTime: "1pm",
-                    endTime: "4pm",
+                    startTime: "13:00",
+                    endTime: "16:00",
                 },
                 {
                     eventId: Math.random().toString(),
@@ -61,8 +61,8 @@ export const DummyEvents = () => {
                     location: faker.address.streetAddress(),
                     eventLeader: faker.name.fullName(),
                     otherInfo: null,
-                    startTime: "1pm",
-                    endTime: "4pm",
+                    startTime: "16:00",
+                    endTime: "18:00",
                 },
                 {
                     eventId: Math.random().toString(),
@@ -76,8 +76,8 @@ export const DummyEvents = () => {
                     location: faker.address.streetAddress(),
                     eventLeader: faker.name.fullName(),
                     otherInfo: null,
-                    startTime: "1pm",
-                    endTime: "4pm",
+                    startTime: "18:00",
+                    endTime: "20:00",
                 },
             ],
         };
